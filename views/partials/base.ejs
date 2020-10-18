@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!--Head Content -->
+    <%- include("./partials/head.ejs") -%>
+</head>
+
+<body class="defult-home">
+
+    <!-- Preloader area start here -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+    <!--End preloader here -->
+
+    <!--Full width header Start-->
+    <div class="full-width-header">
+        <%- include("./partials/toolbox.ejs")-%>
+        <%- include("./partials/header.ejs")-%>
+    </div>
+    <!--Full width header End-->
+
+    <!-- Main content Start -->
+    <div class="main-content">
+        <%- include("./contents/" + (content)) -%>
+    </div>
+    <!-- Main content End -->
+
+    <!-- Footer Start -->
+    <%- include("./partials/footer.ejs") -%>
+    <!-- Footer End -->
+
+    <!-- start scrollUp  -->
+    <div id="scrollUp">
+        <i class="fa fa-angle-up"></i>
+    </div>
+    <!-- End scrollUp  -->
+
+    <!-- Search Modal Start -->
+    <%- include("./partials/search-modal.ejs") -%>
+    <!-- Search Modal End -->
+
+    <!--Scripts -->
+    <%- include("./partials/scripts.ejs") -%>
+</body>
+
+</html>
