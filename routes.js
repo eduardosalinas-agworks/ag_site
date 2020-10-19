@@ -14,6 +14,7 @@ module.exports = function (app, db) {
     app.get("/quem-somos", (req, res) => {
         res.status(200).render("base", {
             title: "Quem Somos",
+            background: "bg-1",
             content: "quem-somos"
         });
     });
@@ -22,6 +23,7 @@ module.exports = function (app, db) {
     app.get("/fabrica-de-software", (req, res) => {
         res.status(200).render("base", {
             title: "Fábrica de Software",
+            background: "bg-2",
             content: "fabrica-de-software"
         });
     });
@@ -30,6 +32,7 @@ module.exports = function (app, db) {
     app.get("/alocacao-de-profissionais", (req, res) => {
         res.status(200).render("base", {
             title: "Alocação de Profissionais",
+            background: "bg-3",
             content: "alocacao-de-profissionais"
         });
     });
@@ -38,6 +41,7 @@ module.exports = function (app, db) {
     app.get("/treinamento", (req, res) => {
         res.status(200).render("base", {
             title: "Treinamento",
+            background: "bg-4",
             content: "treinamento"
         });
     });
@@ -51,13 +55,14 @@ module.exports = function (app, db) {
     app.get("/contato", (req, res) => {
         res.status(200).render("base", {
             title: "Contato",
+            background: "bg-5",
             content: "contato"
         });
     });
 
     // 404 - TODO: VIEW DA 404
     app.get("*", (req, res) => {
-        res.status(404).render("404", { title: "Página não encontrada" });
+        res.status(404).end();
     });
 
 };
